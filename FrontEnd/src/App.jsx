@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import NavBar from './Components/NavBar/NavBar'
+import ComplaintForm from './Components/Complaints/Complaints'
 
 function App()  {
   return (
@@ -8,6 +9,8 @@ function App()  {
       <NavBar />
       <Routes>
         <Route path="/" element={<></>} />
+        <Route path="/complaint" element={<ComplaintForm />} />
+        <Route path="/contact" element={<>Contact Us</>} />
 
         {/* books/sell and books/buy */}
         <Route path="Books" >

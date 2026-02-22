@@ -1,5 +1,5 @@
 import { useState } from "react";
-import "../Styles/ComplaintForm.css";
+import "../../Styles/ComplaintForm.css";
 
 export default function ComplaintForm() {
   const [office, setOffice] = useState("");

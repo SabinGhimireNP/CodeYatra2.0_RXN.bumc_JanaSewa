@@ -11,7 +11,7 @@ function App() {
         <Route path="/services" element={<AllServices/>}></Route> 
         <Route path="/track-Application" element={<TrackApplication/>}></Route>
         <Route path="/complaints" element={<ComplaintForm/>}></Route>
-        <Route path="/notices" element={<GovernmentNotices/>}></Route>
+        <Route path="/government-notice" element={<GovernmentNotices/>}></Route>
         <Route path="/profile" element={<>profile</>}></Route>
         <Route path="/form" element={<CitizenshipDetails/>}></Route>
       </Routes>

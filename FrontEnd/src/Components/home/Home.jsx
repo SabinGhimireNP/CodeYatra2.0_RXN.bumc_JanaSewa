@@ -4,7 +4,9 @@ import { IoMdSearch } from "react-icons/io";
 import { FaArrowRight } from "react-icons/fa";
 import { FaWpforms } from "react-icons/fa6";
 import { IoShieldOutline } from "react-icons/io5";
-
+import { LuCar } from "react-icons/lu";
+import { GoGlobe } from "react-icons/go";
+import { RiBankLine } from "react-icons/ri";
 
 function Home() {
     return (
@@ -70,7 +72,7 @@ function Home() {
                         </div>
                         <div className="bg-white rounded-xl border border-gray-200 flex flex-col items-center p-8">
                             <div className="bg-blue-100 rounded-full p-4 mb-4">
-                                <FaWpforms className="text-blue-600 text-3xl" />
+                                <LuCar className='text-blue-600 text-3xl'/>
                             </div>
                             <h3 className="font-semibold text-lg mb-2 text-gray-800">License (Yatayat)</h3>
                             <p className="text-gray-500 text-sm text-center">Apply for driving license or renewal.</p>
@@ -78,7 +80,7 @@ function Home() {
                         </div>
                         <div className="bg-white rounded-xl border border-gray-200 flex flex-col items-center p-8">
                             <div className="bg-blue-100 rounded-full p-4 mb-4">
-                                <FaWpforms className="text-blue-600 text-3xl" />
+                                <GoGlobe className="text-blue-600 text-3xl" />
                             </div>
                             <h3 className="font-semibold text-lg mb-2 text-gray-800">Passport</h3>
                             <p className="text-gray-500 text-sm text-center">Apply for a new passport or renew your existing one.</p>
@@ -86,7 +88,7 @@ function Home() {
                         </div>
                         <div className="bg-white rounded-xl border border-gray-200 flex flex-col items-center p-8">
                             <div className="bg-blue-100 rounded-full p-4 mb-4">
-                                <FaWpforms className="text-blue-600 text-3xl" />
+                                <RiBankLine className="text-blue-600 text-3xl" />
                             </div>
                             <h3 className="font-semibold text-lg mb-2 text-gray-800">Tax & Revenue</h3>
                             <p className="text-gray-500 text-sm text-center">File taxes, pay revenue, and get tax clearance.</p>

@@ -11,4 +11,4 @@ class User(Base):
     name=Column(String)
     email= Column(String)
     password=Column(String)
-    is_admin = Column(Boolean, default=False) 
+    is_admin = Column(Boolean, default=False ,nullable=False) 

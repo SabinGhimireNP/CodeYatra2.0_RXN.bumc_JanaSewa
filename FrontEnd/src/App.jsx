@@ -1,31 +1,24 @@
-import { useState } from 'react'
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
-import NavBar from './Components/NavBar/NavBar'
 
-function App()  {
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import NavBar from "./Components/NavBar/NavBar";
+import Login from "./Components/Login";
+
+function App() {
   return (
-    <Router>
+    <BrowserRouter>
       <NavBar />
       <Routes>
-        <Route path="/" element={<></>} />
+        <Route path="/" element={<>Home</>}></Route>
+        <Route path="/services" element={<>services</>}></Route>
+        <Route path="/track-Application" element={<>track</>}></Route>
+        <Route path="/complaints" element={<>complaints</>}></Route>
+        <Route path="/government-notice" element={<>government notice</>}></Route>
+        <Route path="/profile" element={<>profile</>}></Route>
+        {/* <Route path="/" element={<Login1 />} /> */}
 
-        {/* books/sell and books/buy */}
-        <Route path="Books" >
-          <Route index element={<>Books</>} />
-          <Route path="Buy" element={<>Buy Books</>} />
-          <Route path="Sell" element={<>Sell Books</>} />
-        </Route>
-
-         <Route path="Profile" >
-          <Route index element={<>Profile</>} />
-          <Route path=":id" element={<>data</>} />
-
-        </Route>
       </Routes>
-
-    </Router>
-    
-  )
+    </BrowserRouter>
+  );
 }
 
-export default App
+export default App;

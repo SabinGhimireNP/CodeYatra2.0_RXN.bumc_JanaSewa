@@ -1,8 +1,4 @@
 import { useState } from "react";
-// import Lottie from "lottie-react";
-// import loadingAnim from ''
-// import tickAnim from "../animations/Success.json"
-// import { useNavigate } from "react-router-dom";
 import logo1 from '../assets/facebook-app-symbol.png'
 import logo2 from '../assets/google.png'
 const Login = () => {
@@ -20,7 +16,6 @@ const Login = () => {
   const [emailS, setEmailS] = useState("");
   const [passwordS, setPasswordS] = useState("");
   const [tick, setTick] =useState(false);
-//   const navigate = useNavigate();
   const handleSlide = () => {
     setFadeOut(true);
     setTimeout(() => {
@@ -141,21 +136,10 @@ const Login = () => {
         <div className="w-[90%] h-[55%] md:w-[70%] md:h-[80%] border rounded-2xl border-none bg-white flex flex-wrap   relative shadow-[0_25px_60px_-15px_rgba(0,0,0,0.25)] overflow-hidden">
           {loading && (
             <div className="w-full h-full flex justify-center items-center bg-[#D1E8E4] absolute z-40">
-              {/* <Lottie
-                animationData={loadingAnim}
-                loop={true}
-                autoplay={true}
-                style={{ width: "100%", height: "100%" }}
-              /> */}
                 </div>
                 )}
        { tick && ( <div className="w-full h-full flex justify-center items-center bg-[#D1E8E4] absolute z-40"> 
-         {/* <Lottie
-                animationData={tickAnim}
-                loop={true}
-                autoplay={true}
-                style={{ width: "100%", height: "100%" }}
-              /> */}
+         
               </div>)
        }
           <div className="text-black z-50 text-3xl  ">{errorBackend}</div>
@@ -363,7 +347,6 @@ const Login = () => {
                 >
                   SIGN UP
                 </button>
-                {/* {loading && <h1 className="text-black absolute z-40" >loading <span className="animate-ping">....</span></h1>} */}
               </form>
             </div>
           )}

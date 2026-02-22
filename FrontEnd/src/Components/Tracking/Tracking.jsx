@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import "../../Styles/TrackApplication.css";
+import { FaSearch } from "react-icons/fa";
 
 export default function TrackApplication() {
   const [serialNumber, setSerialNumber] = useState("");
-
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log("Tracking:", serialNumber);
@@ -17,7 +17,6 @@ export default function TrackApplication() {
       <div className="track-card">
         <form onSubmit={handleSubmit} className="track-form">
           <label className="track-label">Application Serial Number</label>
-
           <div className="input-group">
             <input
               type="text"
@@ -29,7 +28,7 @@ export default function TrackApplication() {
             />
 
             <button type="submit" className="track-button">
-              🔍 Track
+             <FaSearch  className="mr-1 text-sm"/>  Track
             </button>
           </div>
         </form>

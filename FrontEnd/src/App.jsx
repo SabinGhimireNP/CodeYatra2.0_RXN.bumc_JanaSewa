@@ -9,8 +9,6 @@ function App()  {
       <NavBar />
       <Routes>
         <Route path="/" element={<></>} />
-        <Route path="/complaint" element={<ComplaintForm />} />
-        <Route path="/contact" element={<>Contact Us</>} />
 
         {/* books/sell and books/buy */}
         <Route path="Books" >

@@ -53,14 +53,12 @@ const Login = () => {
     });
     if (!res.ok) {
       const err = await res.json(); 
-      throw new Error(err.error || "login failed");  
+      throw new Error(err.detail || "login failed");  
     }
     return res.json();
   };
   const handleSignIn = async () => {
     try {
-      setEmailS("")
-      setPasswordS("")
       setLoading(true);
       const res = await loginApi({ email: emailS, password: passwordS });
       localStorage.setItem("token", res.token);
@@ -88,11 +86,11 @@ const Login = () => {
     const res = await fetch("http://127.0.0.1:5000/users", {
       method: "POST",
       headers: { "content-type": "application/json" },
-      body: JSON.stringify({ name, email, password }),
+      body: JSON.stringify({ full_name: name, email, password, role: "citizen" }),
     });
     if (!res.ok) {
       const err = await res.json();
-      throw new Error(err.error || "signup failed");
+      throw new Error(err.detail || "signup failed");
     }
     return res.json();
   };
@@ -123,7 +121,7 @@ const Login = () => {
       });
       setLoading(false);
       setTick(true);
-      localStorage.setItem("token", res.token);
+      // Note: Signup doesn't return a token, user needs to login after signup
     } catch (err) {
       if (err instanceof Error) setErrorBackend(err.message);
     } finally{

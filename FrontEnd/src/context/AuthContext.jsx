@@ -8,7 +8,6 @@ export const AuthProvider = ({ children }) => {
   const [loading, setLoading] = useState(true);
   const [isAuthenticated, setIsAuthenticated] = useState(false);
 
-  // Check for existing session on mount
   useEffect(() => {
     const checkAuth = async () => {
       const token = localStorage.getItem('access_token');
@@ -32,12 +31,11 @@ export const AuthProvider = ({ children }) => {
   const login = async (email, password) => {
     const response = await authAPI.login(email, password);
     
-    // Store token and user info
     localStorage.setItem('access_token', response.access_token);
     localStorage.setItem('user_role', response.role);
     localStorage.setItem('user_name', response.user_name);
     
-    // Fetch full user data
+    
     const userData = await authAPI.getMe();
     setUser(userData);
     setIsAuthenticated(true);

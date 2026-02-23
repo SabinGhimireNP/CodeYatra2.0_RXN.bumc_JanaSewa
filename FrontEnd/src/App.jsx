@@ -13,7 +13,7 @@ import {
   AdminDashboard,
   AdminApplications,
   AdminServices,
-  TemplateEditor,
+  ContactUs
 } from "./Components/index";
 
 import Personaldetails from "./Components/Profile/Personal-Details/Personaldetails";
@@ -44,11 +44,11 @@ function App() {
             <Route path="/admin" element={<AdminDashboard />} />
             <Route path="/admin/applications" element={<AdminApplications />} />
             <Route path="/admin/services" element={<AdminServices />} />
-            <Route path="Books">
-              <Route index element={<>Books</>} />
-              <Route path="Buy" element={<>Buy Books</>} />
-              <Route path="Sell" element={<>Sell Books</>} />
-            </Route>
+
+            <Route path="/ContactUs" element={<ContactUs />} />
+
+            <Route path="*" element={<div className="not-found">Page Not Found</div>} />
+
           </Routes>
           <Footer />
         </BrowserRouter>

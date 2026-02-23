@@ -46,7 +46,7 @@ const Login = () => {
     email,
     password,
   }) => {
-    const res = await fetch("http://127.0.0.1:5000/api/auth/login", {
+    const res = await fetch("http://127.0.0.1:5000/login", {
       method: "POST",
       headers: { "content-type": "application/json" },
       body: JSON.stringify({ email, password }),
@@ -61,17 +61,8 @@ const Login = () => {
     try {
       setLoading(true);
       const res = await loginApi({ email: emailS, password: passwordS });
-      localStorage.setItem("access_token", res.access_token);
-      localStorage.setItem("user_role", res.role);
-      localStorage.setItem("user_name", res.user_name);
-      localStorage.setItem("user_id", res.user_id);
-      
-      // Redirect based on role
-      if (res.role === "admin") {
-        Navigate("/admin");
-      } else {
-        Navigate("/");
-      }
+      localStorage.setItem("token", res.token);
+      Navigate("/");
       
 
     } catch (err) {
@@ -87,8 +78,12 @@ const Login = () => {
       setLoading(false);
     }
   };
-  const SignUpApi = async ({ name, email, password }) => {
-    const res = await fetch("http://127.0.0.1:5000/api/auth/register", {
+  const SignUpApi = async ( {name,
+    email,
+    password})=> {
+  
+  
+    const res = await fetch("http://127.0.0.1:5000/users", {
       method: "POST",
       headers: { "content-type": "application/json" },
       body: JSON.stringify({ full_name: name, email, password, role: "citizen" }),

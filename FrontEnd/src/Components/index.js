@@ -10,6 +10,8 @@ import GovernmentNotices from "./Notices/Notices";
 import ApplyForm from "./ApplyForm/ApplyForm";
 import { AdminDashboard, AdminApplications, AdminServices } from "./Admin";
 import ContactUs from "./ContactUS/ContactUs";
+import TemplateEditor from "./Templates/Template";
+
 
 export {
   NavBar,
@@ -25,7 +27,9 @@ export {
   AdminDashboard,
   AdminApplications,
   AdminServices,
-  ContactUs
+  Changes,
+  ContactUs,
+  TemplateEditor
 };
 
 
